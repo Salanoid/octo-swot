@@ -1,0 +1,1 @@
+json.partial! "swot_tables/swot_table", swot_table: @swot_table

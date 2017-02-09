@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @swot_table.title %>
+</h1>
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-3 gauche">
+      <p>
+        <strong>Strength:</strong> <br>
+        <%= @swot_table.strength %> <br>
+      </p>
+
+      <p>
+        <strong>Weakness:</strong> <br>
+        <%= @swot_table.weakness %> <br>
+      </p>
+    </div>
+
+    <div class="col-lg-5 corps">
+      <p>
+        <strong>Opportunity:</strong> <br>
+        <%= @swot_table.opportunity %> <br>
+      </p>
+
+      <p>
+        <strong>Threats:</strong> <br>
+        <%= @swot_table.threats %> <br>
+      </p>
+    </div>
+    <div class="col-lg-2">
+    </div>
+  </div>
+</div>
+
+<p>
+  <% if @swot_result == 1 %>
+    <h1>It's worth it!</h1>
+  <% elsif @swot_result == 0 %>
+    <h1>It isn't worth it!</h1>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_swot_table_path(@swot_table), class: 'btn btn-outline-success' %>
+<br>
+<br>
+<%= link_to 'Destroy', @swot_table, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger' %> <br>
+

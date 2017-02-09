@@ -1,0 +1,2 @@
+class SwotTable < ApplicationRecord
+end

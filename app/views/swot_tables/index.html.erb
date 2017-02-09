@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Swot Tables</h1>
+
+<br>
+
+<% @swot_tables.each do |swot_table| %>
+    <h2><%= link_to swot_table.title, swot_table, class: 'link-style' %></h2>
+    <br>
+<% end %>
+
+<br>
+
+<%= link_to 'New Swot Table', new_swot_table_path, class: 'btn btn-outline-success' %>

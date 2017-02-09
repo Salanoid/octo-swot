@@ -1,0 +1,1 @@
+json.array! @swot_tables, partial: 'swot_tables/swot_table', as: :swot_table

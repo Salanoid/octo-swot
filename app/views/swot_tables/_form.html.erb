@@ -1,0 +1,59 @@
+<%= form_for(swot_table) do |f| %>
+  <% if swot_table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(swot_table.errors.count, "error") %> prohibited this swot_table from being saved:</h2>
+
+      <ul>
+      <% swot_table.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <br>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+    <br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-3 gauche">
+          <div class="field">
+            <%= f.label :strength %> <br>
+            <%= f.text_area :strength %>
+          </div>
+
+          <div class="field">
+            <%= f.label :weakness %> <br>
+            <%= f.text_area :weakness %>
+          </div>
+        </div>
+
+        <div class="col-lg-5 corps">
+          <div class="field">
+            <%= f.label :opportunity %> <br>
+            <%= f.text_area :opportunity %>
+          </div>
+
+          <div class="field">
+            <%= f.label :threats %> <br>
+            <%= f.text_area :threats %>
+          </div>
+        </div>
+        <div class="col-lg-2">
+        </div>
+      </div>
+    </div>
+
+  <br>
+  <div class="actions">
+    <%= f.submit 'SWOT', class: 'btn btn-outline-success' %>
+  </div>
+<% end %>

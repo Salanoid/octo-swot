@@ -15,3 +15,5 @@ Setup:
 * Database creation:
  copy /config/database.example.yml to a new file /config/database.yml
 
+ # Have fun!
+

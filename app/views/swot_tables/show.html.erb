@@ -8,32 +8,41 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-2">
+    <div class="col-lg-1">
     </div>
-    <div class="col-lg-3 gauche">
-      <p>
-        <strong>Strength:</strong> <br>
-        <%= @swot_table.strength %> <br>
-      </p>
-
-      <p>
-        <strong>Weakness:</strong> <br>
-        <%= @swot_table.weakness %> <br>
-      </p>
+    <div class="col-lg-5 gauche ">
+      <div class="block-table card">
+        
+          <h3 class="card-title"><strong>Strength</strong> </h3><br>
+          <p><%= @swot_table.strength %></p> <br>
+        
+      </div>  
+      <br>
+      <div class="block-table card">
+        
+          <h3 class="card-title"><strong>Opportunity</strong> </h3><br>
+          <p><%= @swot_table.opportunity %> </p><br>
+        
+      </div>
     </div>
-
-    <div class="col-lg-5 corps">
-      <p>
-        <strong>Opportunity:</strong> <br>
-        <%= @swot_table.opportunity %> <br>
-      </p>
-
-      <p>
-        <strong>Threats:</strong> <br>
-        <%= @swot_table.threats %> <br>
-      </p>
+<br>
+    <div class="col-lg-5 droit ">
+      <div class="block-table card">
+        
+          <h3 class="card-title"><strong>Weakness</strong> </h3><br>
+          <p><%= @swot_table.weakness %> </p><br>
+        
+      </div>
+      <br>
+      <div class="block-table  card">
+        
+          <h3 class="card-title"><strong>Threats</strong></h3> <br>
+          <p><%= @swot_table.threats %></p><br>
+        
+      </div>  
+      <br>
     </div>
-    <div class="col-lg-2">
+    <div class="col-lg-1">
     </div>
   </div>
 </div>
@@ -49,3 +58,7 @@
 <%= link_to 'Edit', edit_swot_table_path(@swot_table), class: 'btn btn-outline-success' %>
 <br>
 <br>
+<style>
+
+		
+</style>

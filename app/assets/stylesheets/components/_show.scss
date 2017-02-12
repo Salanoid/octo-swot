@@ -1,0 +1,32 @@
+  .block-table{min-height:250px;}
+  .border{border:2px;border-width:2px;border:1px solid black;}
+  	.card-title {
+		background: rgba(157, 187, 63, .85);
+		padding: 3.5% 0 2.5% 0;
+		color: white;
+		font-family: 'Roboto Condensed', sans-serif;
+		text-transform: uppercase;
+		position: relative;
+		top: 0;
+		width: 100%;
+		h3 {
+			font-size: 1.2em;
+			line-height: 1.2;
+			padding: 0 3.5%;
+			margin: 0;
+		}
+	}
+	.card{position: relative;
+	margin-bottom: 20px; 
+	padding-bottom: 30px; 
+	background: #fefff9;
+	color: #363636; //the whole content of the card becomes linked, so this will give the text a "norma;" appearance
+	text-decoration: none;
+     @include box-shadow(rgba(black, 0.19) 0 0 8px 0);
+    @include border-radius(4px);
+		}
+		p{margin:5px 20px;}
+		
+		.link-style {
+    text-decoration: none;
+}

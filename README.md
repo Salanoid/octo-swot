@@ -7,10 +7,11 @@ https://en.wikipedia.org/wiki/SWOT_analysis <br>
 Setup:
 
 * Ruby version = 2.4.0
+* Rails version = 5.0.1
 
 * System dependencies = bundle i 
 
 * Database creation:
- copy /config/database.example.yml to a new file /config/databse.yml
+ copy /config/database.example.yml to a new file /config/database.yml
 
 * 

@@ -22,24 +22,25 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-1">
         </div>
-        <div class="col-lg-3 gauche">
+        <div class="col-lg-5 gauche">
           <div class="field">
             <%= f.label :strength %> <br>
             <%= f.text_area :strength %>
           </div>
 
           <div class="field">
-            <%= f.label :weakness %> <br>
-            <%= f.text_area :weakness %>
+            <%= f.label :opportunity %> <br>
+            <%= f.text_area :opportunity %>
           </div>
         </div>
 
         <div class="col-lg-5 corps">
+          
           <div class="field">
-            <%= f.label :opportunity %> <br>
-            <%= f.text_area :opportunity %>
+            <%= f.label :weakness %> <br>
+            <%= f.text_area :weakness %>
           </div>
 
           <div class="field">
@@ -47,7 +48,7 @@
             <%= f.text_area :threats %>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-1">
         </div>
       </div>
     </div>
@@ -57,3 +58,10 @@
     <%= f.submit 'SWOT', class: 'btn btn-outline-success' %>
   </div>
 <% end %>
+<style>
+
+  textarea{
+    height:200px;
+    width:100%;
+  }
+</style>

@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Octo-swot it's an app based on my algorithm. <br>
+What is SWOT? https://www.youtube.com/watch?v=XfB0g_JDIds <br>
+https://en.wikipedia.org/wiki/SWOT_analysis <br>
 
-Things you may want to cover:
+Setup:
 
-* Ruby version
+* Ruby version = 2.4.0
 
-* System dependencies
+* System dependencies = bundle i 
 
-* Configuration
+* Database creation:
+ copy /config/database.example.yml to a new file /config/databse.yml
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 

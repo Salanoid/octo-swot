@@ -19,7 +19,7 @@
          
 
           
-              <%= link_to "log out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
             
         
       </div>
@@ -28,7 +28,7 @@
       <%= link_to "Add SWOT", new_swot_table_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
 
     <% else %>
-      <%= link_to "Log in", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Sign in", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>

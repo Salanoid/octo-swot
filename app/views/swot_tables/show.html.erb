@@ -55,7 +55,9 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_swot_table_path(@swot_table), class: 'btn btn-outline-success' %>
+<% if current_user.id == @swot_table.user_id%>
+  <%= link_to 'Edit', edit_swot_table_path(@swot_table), class: 'btn btn-outline-success' %>
+<% end %>
 <br>
 <br>
 <style>

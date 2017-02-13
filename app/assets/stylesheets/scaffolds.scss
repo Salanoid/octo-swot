@@ -22,14 +22,17 @@ pre {
 
 a {
   color: #000;
+  text-decoration: none;
 
   &:visited {
     color: #666;
+    text-decoration: none;
   }
 
   &:hover {
     color: #fff;
     background-color: #000;
+    text-decoration: none;
   }
 }
 
@@ -87,4 +90,3 @@ div {
 label {
   display: block;
 }
-

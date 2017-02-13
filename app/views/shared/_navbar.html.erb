@@ -1,0 +1,46 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <%= image_tag "logo.png" %>
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+
+    <% if user_signed_in? %>
+
+      <!-- Text link -->
+      <%= link_to "All SWOT", swot_tables_path, class: "navbar-wagon-item navbar-wagon-link"%>
+
+      <!-- Profile picture and dropdown -->
+      <div class="navbar-wagon-item">
+        
+         
+
+          
+              <%= link_to "log out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
+            
+        
+      </div>
+
+      <!-- Button (call-to-action) -->
+      <%= link_to "Add SWOT", new_swot_table_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+
+    <% else %>
+      <%= link_to "Log in", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <% end %>
+  </div>
+
+
+</div>
+
+<style>
+    a:hover {
+     text-decoration: none !important;
+}
+a {
+     text-decoration: none !important;
+}
+</style>

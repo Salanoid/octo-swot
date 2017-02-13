@@ -1,0 +1,37 @@
+<div class="banner" >
+    <div class="banner-content">
+      <h1>SWOT analysis</h1>
+      <p>create your oun SWOT</p>
+      <%= link_to "GET IT", new_user_registration_path, class: "btn btn-warning btn-lg" %>
+    </div>
+</div>
+
+<style>
+    .banner {
+  color: white;
+  text-align: center;
+  height: calc(100vh - 70px);
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */ 
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#34495e;
+
+}
+.banner-content {
+  min-width: 400px;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+</style>

@@ -1,10 +1,13 @@
 class SwotTablesController < ApplicationController
   before_action :set_swot_table, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authenticate_user!, only: [ :index ]
+  
   # GET /swot_tables
   # GET /swot_tables.json
   def index
-    @swot_tables = SwotTable.all
+    if user_signed_in?
+      @swot_tables = SwotTable.where(user_id: current_user).all
+    end 
   end
 
   # GET /swot_tables/1
@@ -36,7 +39,7 @@ class SwotTablesController < ApplicationController
   # POST /swot_tables.json
   def create
     @swot_table = SwotTable.new(swot_table_params)
-
+    @swot_table.user = current_user
     respond_to do |format|
       if @swot_table.save
         format.html { redirect_to @swot_table, notice: 'Swot table was successfully created.' }

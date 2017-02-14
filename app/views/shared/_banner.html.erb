@@ -5,7 +5,7 @@
       <%= link_to "GET IT", new_user_registration_path, class: "btn btn-warning btn-lg" %>
       <br>
       <br>
-      <iframe width="500" height="275" src="https://www.youtube.com/embed/XfB0g_JDIds" allowfullscreen></iframe>
+      <iframe width="500" height="250" src="https://www.youtube.com/embed/XfB0g_JDIds" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -37,4 +37,15 @@
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 520px) {
+  iframe {
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  iframe {
+    width: 240px;
+  }
+}
 </style>

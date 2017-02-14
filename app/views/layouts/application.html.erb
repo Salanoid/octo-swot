@@ -11,6 +11,14 @@
   <body>
     <%= render "shared/navbar" %>
     <center>
+      <br>  
+      <% if flash[:notice] %>
+        <p class="alert"><%= flash[:notice] %></p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p class="alert"><%= flash[:alert] %></p>
+      <% end %>
+      <br>
       <%= yield %>
     </center>
   </body>

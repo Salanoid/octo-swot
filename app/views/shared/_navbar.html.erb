@@ -10,9 +10,6 @@
 
     <% if user_signed_in? %>
 
-      <!-- Text link -->
-      <%= link_to "My SWOTs", swot_tables_path, class: "navbar-wagon-item navbar-wagon-link"%>
-
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
         <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'navbar-wagon-item navbar-wagon-link' %>

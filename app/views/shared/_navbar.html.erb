@@ -10,11 +10,6 @@
 
     <% if user_signed_in? %>
 
-      <!-- Profile picture and dropdown -->
-      <div class="navbar-wagon-item">
-        <%= link_to 'Settings', edit_user_registration_path, class: 'navbar-wagon-item navbar-wagon-link' %>
-      </div>
-
       <div class="navbar-wagon-item">
         <%= link_to 'Sign Out', destroy_user_session_path, :method => :get, class: 'navbar-wagon-item navbar-wagon-link' %>
       </div>

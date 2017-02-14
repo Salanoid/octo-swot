@@ -16,4 +16,4 @@ Setup:
  copy /config/database.example.yml to a new file /config/database.yml
 
  # Have fun!
- # Foo are commits for configuring things on heroku xD ignore them.
+ # Foo foo are just for heroku setup xD ignore them.

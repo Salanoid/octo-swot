@@ -18,12 +18,13 @@ class SwotTablesController < ApplicationController
     @number_of_opportunities = @swot_table.opportunity.split(',').length
     @number_of_threats = @swot_table.threats.split(',').length
 
-
-    if ((@number_of_strengths + (@number_of_opportunities / 2)) - (@number_of_weakness + (@number_of_threats / 2))) > 0
-      @swot_result = 2
-    elsif ((@number_of_strengths + (@number_of_opportunities / 2)) - (@number_of_weakness + (@number_of_threats / 2))) == 0
-      @swot_result = 1
-    else @swot_result = 0
+    if @number_of_strengths > 0 or @number_of_weakness > 0 or @number_of_opportunities > 0 or @number_of_threats > 0
+      if ((@number_of_strengths + (@number_of_opportunities / 2)) - (@number_of_weakness + (@number_of_threats / 2))) > 0
+          @swot_result = 2
+        elsif ((@number_of_strengths + (@number_of_opportunities / 2)) - (@number_of_weakness + (@number_of_threats / 2))) == 0
+          @swot_result = 1
+        else @swot_result = 0
+      end
     end
   end
 

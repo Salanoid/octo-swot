@@ -1,7 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-
+  
   config.assets.digest = true
 
   config.action_mailer.default_url_options = { host: 'octo-swot.herokuapp.com' }

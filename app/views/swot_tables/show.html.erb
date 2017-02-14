@@ -48,8 +48,10 @@
 </div>
 
 <p>
-  <% if @swot_result == 1 %>
+  <% if @swot_result == 2 %>
     <h1>It's worth it!</h1>
+  <% elsif @swot_result == 1 %>
+    <h1>You can take the risk!</h1>
   <% elsif @swot_result == 0 %>
     <h1>It isn't worth it!</h1>
   <% end %>

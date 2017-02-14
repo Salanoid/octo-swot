@@ -9,13 +9,10 @@
 
 
     <% if user_signed_in? %>
-
-      <div class="navbar-wagon-item">
-        <%= link_to 'Sign Out', destroy_user_session_path, :method => :get, class: 'navbar-wagon-item navbar-wagon-link' %>
-      </div>
+      <%= link_to 'Sign Out', destroy_user_session_path, :method => :get, class: 'navbar-wagon-item navbar-wagon-link' %>
 
       <!-- Button (call-to-action) -->
-      <%= link_to "Add SWOT", new_swot_table_path, class: "navbar-wagon-item btn btn-warning" %>
+      <%= link_to "Add SWOT", new_swot_table_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
 
     <% else %>
       <%= link_to "Sign in", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>

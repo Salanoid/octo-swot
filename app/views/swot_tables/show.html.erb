@@ -54,10 +54,7 @@
     <h1>It isn't worth it!</h1>
   <% end %>
 </p>
-
-<% if current_user.id == @swot_table.user_id%>
   <%= link_to 'Edit', edit_swot_table_path(@swot_table), class: 'btn btn-outline-success' %>
-<% end %>
 <br>
 <br>
 <style>

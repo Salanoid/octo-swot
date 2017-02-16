@@ -1,17 +1,17 @@
 <% if user_signed_in? %>
-    
+
     <h1>Your Swots</h1> <br>
     <p> You have to separate every strength, opportunity, weakness and threats with a comma. </p>
-    
+
     <br>
-    
+
     <% @swot_tables.each do |swot_table| %>
         <h2><%= link_to swot_table.title, swot_table, class: 'link-style' %></h2>
         <br>
     <% end %>
-    
+
     <br>
-    
+
 <% else %>
     <%= render "shared/banner" %>
 <% end %>

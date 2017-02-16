@@ -1,13 +1,13 @@
 class SwotTablesController < ApplicationController
   before_action :set_swot_table, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [ :index ]
-  
+
   # GET /swot_tables
   # GET /swot_tables.json
   def index
     if user_signed_in?
       @swot_tables = SwotTable.where(user_id: current_user).all
-    end 
+    end
   end
 
   # GET /swot_tables/1

@@ -1,13 +1,13 @@
 class SwotTablesController < ApplicationController
   before_action :set_swot_table, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [ :index ]
-  
+
   # GET /swot_tables
   # GET /swot_tables.json
   def index
     if user_signed_in?
       @swot_tables = SwotTable.where(user_id: current_user).all
-    end 
+    end
   end
 
   # GET /swot_tables/1
@@ -20,10 +20,10 @@ class SwotTablesController < ApplicationController
 
     if @number_of_strengths > 0 or @number_of_weakness > 0 or @number_of_opportunities > 0 or @number_of_threats > 0
       if ((@number_of_strengths + (@number_of_opportunities / 2)) - (@number_of_weakness + (@number_of_threats / 2))) > 0
-          @swot_result = 2
-        elsif ((@number_of_strengths + (@number_of_opportunities / 2)) - (@number_of_weakness + (@number_of_threats / 2))) == 0
-          @swot_result = 1
-        else @swot_result = 0
+        @swot_result = 2
+      elsif ((@number_of_strengths + (@number_of_opportunities / 2)) - (@number_of_weakness + (@number_of_threats / 2))) == 0
+        @swot_result = 1
+      else @swot_result = 0
       end
     end
   end
@@ -78,13 +78,13 @@ class SwotTablesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_swot_table
-      @swot_table = SwotTable.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_swot_table
+    @swot_table = SwotTable.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def swot_table_params
-      params.require(:swot_table).permit(:title, :strength, :weakness, :opportunity, :threats)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def swot_table_params
+    params.require(:swot_table).permit(:title, :strength, :weakness, :opportunity, :threats)
+  end
 end

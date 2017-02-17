@@ -4,7 +4,6 @@ Rails.application.configure do
   config.assets.digest = true
   config.serve_static_assets = true
   config.assets.compress = true
-  config.assets.compile = true
 
   config.action_mailer.default_url_options = { host: 'octo-swot.herokuapp.com' }
 

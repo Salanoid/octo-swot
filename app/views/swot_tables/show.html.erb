@@ -10,34 +10,34 @@
     </div>
     <div class="col-lg-5 gauche ">
       <div class="block-table card">
-        
+
           <h3 class="card-title"><strong>Strength</strong> </h3><br>
           <p><%= @swot_table.strength %></p> <br>
-        
-      </div>  
+
+      </div>
       <br>
       <div class="block-table card">
-        
+
           <h3 class="card-title"><strong>Opportunity</strong> </h3><br>
           <p><%= @swot_table.opportunity %> </p><br>
-        
+
       </div>
     </div>
 <br>
     <div class="col-lg-5 droit ">
       <div class="block-table card">
-        
+
           <h3 class="card-title"><strong>Weakness</strong> </h3><br>
           <p><%= @swot_table.weakness %> </p><br>
-        
+
       </div>
       <br>
       <div class="block-table  card">
-        
+
           <h3 class="card-title"><strong>Threats</strong></h3> <br>
           <p><%= @swot_table.threats %></p><br>
-        
-      </div>  
+
+      </div>
       <br>
     </div>
     <div class="col-lg-1">
@@ -45,20 +45,15 @@
   </div>
 </div>
 
-<p>
-  <% if @swot_result == 2 %>
-    <h1>It's worth it!</h1>
-  <% elsif @swot_result == 1 %>
-    <h1>You can take the risk only if you actually want it!</h1>
-  <% elsif @swot_result == 0 %>
-    <h1>It isn't worth it!</h1>
-  <% end %>
-</p>
-  <%= link_to 'Edit', edit_swot_table_path(@swot_table), class: 'btn btn-warning' %>
-  <br>
-<br>
-<br>
-<style>
+<% if @swot_result == 2 %>
+  <h1>It's worth it!</h1>
+<% elsif @swot_result == 1 %>
+  <h1>You can take the risk only if you actually want it!</h1>
+<% elsif @swot_result == 0 %>
+  <h1>It isn't worth it!</h1>
+<% end %>
+<%= link_to 'Edit', edit_swot_table_path(@swot_table), class: 'btn btn-warning' %>
 
-		
-</style>
+<br>
+<br>
+<br>

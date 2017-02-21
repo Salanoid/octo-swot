@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @swot_table.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+
+<body>
+  <br>
+  <center>
+    <h1>
+      <%= @swot_table.title %>
+    </h1>
+
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-5 gauche ">
+          <div class="block-table card">
+            <h3 class="card-title"><strong>Strength</strong> </h3><br>
+            <p><%= @swot_table.strength %></p> <br>
+          </div>
+          <br>
+          <div class="block-table card">
+            <h3 class="card-title"><strong>Opportunity</strong> </h3><br>
+            <p><%= @swot_table.opportunity %> </p><br>
+          </div>
+        </div>
+    <br>
+        <div class="col-lg-5 droit ">
+          <div class="block-table card">
+            <h3 class="card-title"><strong>Weakness</strong> </h3><br>
+            <p><%= @swot_table.weakness %> </p><br>
+          </div>
+          <br>
+          <div class="block-table  card">
+            <h3 class="card-title"><strong>Threats</strong></h3> <br>
+            <p><%= @swot_table.threats %></p><br>
+          </div>
+          <br>
+        </div>
+        <div class="col-lg-1">
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <% if @swot_result == 2 %>
+      <h1>It's worth it!</h1>
+    <% elsif @swot_result == 1 %>
+      <h1>You can take the risk only if you actually want it!</h1>
+    <% elsif @swot_result == 0 %>
+      <h1>It isn't worth it!</h1>
+    <% end %>
+
+  </center>
+</body>

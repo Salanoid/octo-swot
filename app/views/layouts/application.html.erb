@@ -12,13 +12,13 @@
   <body>
     <%= render "shared/navbar" %>
     <center>
-    
+
       <% if flash[:alert] %>
         <br>
         <p class="alert"><%= flash[:alert] %></p>
         <br>
       <% end %>
-      
+
       <%= yield %>
     </center>
   </body>

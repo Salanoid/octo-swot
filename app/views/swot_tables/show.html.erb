@@ -53,6 +53,7 @@
   <h1>It isn't worth it!</h1>
 <% end %>
 <%= link_to 'Edit', edit_swot_table_path(@swot_table), class: 'btn btn-warning' %>
+<%= link_to 'PDF', swot_table_url(format: :pdf), class: 'btn btn-warning' %>
 
 <br>
 <br>

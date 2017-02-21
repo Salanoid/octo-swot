@@ -26,6 +26,15 @@ class SwotTablesController < ApplicationController
       else @swot_result = 0
       end
     end
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render  template: 'swot_tables/show',
+                pdf: 'swot',
+                viewport_size: '1280x1024'
+      end
+    end
   end
 
   # GET /swot_tables/new
